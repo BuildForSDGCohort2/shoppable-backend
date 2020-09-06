@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
-const productsurls = require ('./api/productsapi')
+const productsurls = require('./api/productsapi')
 
 dotenv.config()
 
@@ -14,6 +14,6 @@ app.use(cors())
 app.use(express.json())
 app.use('/products', productsurls)
 
-app.listen(6000, () => 
+app.listen(6000, ()=> 
     console.log("Server is running on port 6000")
 )
