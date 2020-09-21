@@ -11,7 +11,7 @@ router.get('/', (request, response) =>{
 
 //display one product
 router.get('/:id', (request, response) => {
-    products.findbyId(request.params.id)
+    products.findById(request.params.id)
     .then(products => {response.json(products)})
     .catch(error => {response.json(error)})
 })
